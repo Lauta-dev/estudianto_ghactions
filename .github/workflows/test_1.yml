@@ -22,5 +22,5 @@ jobs:
       - name: Install neofech
         run: sudo apt install neofetch
 
-      - name Exec neofetch
+      - name: Exec neofetch
         run: neofetch
