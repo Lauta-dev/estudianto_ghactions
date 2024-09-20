@@ -3,12 +3,13 @@ name: Test
 # Eventos
 on:
   - push
+  - pull_request
 
 jobs:
   # NOmbre del job
   hola_job:
 
-    # Maquina done se ejecute el job
+    # Maquina donde se ejecute el job
     runs-on: ubuntu-latest
 
     steps:
