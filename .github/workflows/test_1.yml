@@ -14,3 +14,13 @@ jobs:
     steps:
       - name: Hi Word
         run: echo "Hi work"
+
+  exec_neofetch:
+    run-on: ubuntu-latest
+
+    steps:
+      - name: Install neofech
+        run: sudo apt install neofetch
+
+      - name Exec neofetch
+        run: neofetch
