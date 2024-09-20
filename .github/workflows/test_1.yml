@@ -16,7 +16,7 @@ jobs:
         run: echo "Hi work"
 
   exec_neofetch:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Install neofech
