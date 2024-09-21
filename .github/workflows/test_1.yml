@@ -29,6 +29,7 @@ jobs:
 
   exec_ls:
     runs-on: ubuntu-latest
+    needs: exec_neofetch
 
     steps:
       - name: exec ls command
