@@ -20,7 +20,9 @@ jobs:
 
     steps:
       - name: Install neofech
-        run: sudo apt install neofetch
+        run: |
+          apt-get install neofetch cat
+          ls
 
       - name: Exec neofetch
         run: neofetch
