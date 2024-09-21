@@ -39,3 +39,13 @@ jobs:
         run: |
           chmod +x ./ls.sh
           ./ls.sh
+
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4.0.4
+
+      - name: node version
+        run: node -v
+
+      - name: Hello word in JS
+        run: node hello.js
