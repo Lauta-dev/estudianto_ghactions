@@ -32,5 +32,10 @@ jobs:
     needs: exec_neofetch
 
     steps:
-      - name: exec ls command
-        run: ls /
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: ls
+        run: |
+          chmod +x ./ls.sh
+          ./ls.sh
