@@ -27,6 +27,9 @@ jobs:
       - name: Exec neofetch
         run: neofetch
 
+  exec_ls:
+    runs-on: ubuntu-latest
+
     steps:
       - name: exec ls command
         run: ls
