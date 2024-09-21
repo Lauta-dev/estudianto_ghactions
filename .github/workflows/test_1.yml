@@ -32,4 +32,4 @@ jobs:
 
     steps:
       - name: exec ls command
-        run: ls
+        run: ls /
