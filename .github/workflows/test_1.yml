@@ -6,6 +6,7 @@ on:
 
 jobs:
   hola_job:
+    runs-on: ubuntu-latest
 
     steps:
       - name: Print Hola
