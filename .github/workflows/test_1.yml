@@ -65,6 +65,9 @@ jobs:
         run: cd view_db
 
       - name: list files witn rg
+        run: ls 
+
+      - name: list files witn rg
         run: rg -l "console.log"
 
       - name: replace console.log with space
