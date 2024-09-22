@@ -61,6 +61,9 @@ jobs:
       - name: clone repo view_db
         run: git clone https://github.com/Lauta-dev/view_db.git
 
+      - name: cd to view_db
+        run: cd view_db
+
       - name: list files witn rg
         run: rg -l "console.log"
 
