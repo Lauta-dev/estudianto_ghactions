@@ -65,7 +65,7 @@ jobs:
         run: cd view_db
 
       - name: list files witn rg
-        run: ls 
+        run: ls view_db
 
       - name: list files witn rg
         run: rg -l "console.log"
