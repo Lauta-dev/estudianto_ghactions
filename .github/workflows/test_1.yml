@@ -26,7 +26,7 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v4.1.7
-            
+
       - name: use my action
         uses: ./.github/actions/my-action
         with:
@@ -34,3 +34,7 @@ jobs:
 
       - name: print repo name
         run: echo "repo $GITHUB_REPOSITORY"
+
+    steps:
+      - name: Print secret value
+        run: echo "Secreat value ${{ secrets.MY }}"
