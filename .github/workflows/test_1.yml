@@ -35,6 +35,5 @@ jobs:
       - name: print repo name
         run: echo "repo $GITHUB_REPOSITORY"
 
-    steps:
       - name: Print secret value
         run: echo "Secreat value ${{ secrets.MY }}"
