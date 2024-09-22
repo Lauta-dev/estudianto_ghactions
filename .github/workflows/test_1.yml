@@ -40,7 +40,6 @@ jobs:
           chmod +x ./ls.sh
           ./ls.sh
 
-
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.4
 
@@ -49,3 +48,25 @@ jobs:
 
       - name: Hello word in JS
         run: node hello.js
+
+    replace_word:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v4.1.7
+
+        - name: install ripgrep and git
+          run: sudo apt-get install ripgrep git
+
+        - name: clone repo view_db
+          run: git clone https://github.com/Lauta-dev/view_db.git
+
+        - name: list files witn rg
+          run: rg -l "console.log"
+
+        - name: replace console.log with space
+          run: |
+            rg -l "console.log" | xargs sed -i 's/console.log/ /g'
+
+        - name: after replace
+          run: rg -l "console.log"
