@@ -1,0 +1,15 @@
+name: 'My Action'
+description: Test my action
+
+runs:
+
+  # Composite permite agrupar pasos
+  using: "composite"
+
+  steps:
+    - uses: actions/checkout@v2
+    - name: ls
+      run: ls
+
+      # Para ejecutar un comando en una linea de comandos se necesita usar la shell
+      shell: bash

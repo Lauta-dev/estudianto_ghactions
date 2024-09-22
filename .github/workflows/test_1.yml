@@ -1,78 +1,16 @@
 name: Test
 
-# Eventos
 on:
   - push
   - pull_request
 
 jobs:
-  # NOmbre del job
   hola_job:
 
-    # Maquina donde se ejecute el job
-    runs-on: ubuntu-latest
+  steps:
+    - name: Print Hola
+      run: |
+        echo "Hola mundo"
 
-    steps:
-      - name: Hi Word
-        run: echo "Hi work"
-
-  exec_neofetch:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Install neofech
-        run: |
-          sudo apt-get install neofetch
-
-      - name: Exec neofetch
-        run: neofetch
-
-  exec_ls:
-    runs-on: ubuntu-latest
-    needs: exec_neofetch
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4.1.7
-
-      - name: ls
-        run: |
-          chmod +x ./ls.sh
-          ./ls.sh
-
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v4.0.4
-
-      - name: node version
-        run: node -v
-
-      - name: Hello word in JS
-        run: node hello.js
-
-  replace_word:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4.1.7
-
-      - name: install ripgrep and git
-        run: sudo apt-get install ripgrep git
-
-      - name: clone repo view_db
-        run: git clone https://github.com/Lauta-dev/view_db.git
-
-      - name: cd to view_db
-        run: cd view_db
-
-      - name: list files witn rg
-        run: ls view_db
-
-      - name: list files witn rg
-        run: rg -l "console.log"
-
-      - name: replace console.log with space
-        run: |
-          rg -l "console.log" | xargs sed -i 's/console.log/ /g'
-
-      - name: after replace
-        run: rg -l "console.log"
+    - name: use my action
+      uses: ./.github/actions/my-action
