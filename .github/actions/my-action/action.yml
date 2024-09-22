@@ -1,6 +1,14 @@
 name: 'My Action'
 description: Test my action
 
+# Inputs
+inputs:
+  # input name
+  message:
+    description: The message to print
+    required: true
+    default: Hi
+
 runs:
 
   # Composite permite agrupar pasos
@@ -8,8 +16,6 @@ runs:
 
   steps:
     - uses: actions/checkout@v2
-    - name: ls
-      run: ls
-
-      # Para ejecutar un comando en una linea de comandos se necesita usar la shell
+    - name: print message from inputs
+      run: echo "${{ inputs.message }}"
       shell: bash
