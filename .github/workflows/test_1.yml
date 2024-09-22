@@ -13,5 +13,8 @@ jobs:
         run: |
           echo "Hola mundo"
 
+      - name: Checkout
+        uses: actions/checkout@v4.1.7
+            
       - name: use my action
         uses: ./.github/actions/my-action
