@@ -7,10 +7,10 @@ on:
 jobs:
   hola_job:
 
-  steps:
-    - name: Print Hola
-      run: |
-        echo "Hola mundo"
+    steps:
+      - name: Print Hola
+        run: |
+          echo "Hola mundo"
 
-    - name: use my action
-      uses: ./.github/actions/my-action
+      - name: use my action
+        uses: ./.github/actions/my-action
